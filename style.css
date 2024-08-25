@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container{
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.267);
+    width: 350px;
+    padding: 10px;
+    border-radius: 15px;
+}
+.container .listCreateArea{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    border-radius: 20px;
+    background-color: rgba(10, 10, 10, 0.171);
+}
+.listCreateArea input{
+    height: 100%;
+    width: 75%;
+    border: none;
+    background-color: transparent;
+    padding: 0 10px;
+    font-size: 0.8em;
+    font-weight: 500;
+    outline: none;
+}
+.listCreateArea input::placeholder{
+    font-size: 0.8em;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.562);
+}
+.listCreateArea button{
+    width: 25%;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(114, 172, 21);
+    outline: none;
+    font-weight: 600;
+    font-size: 0.8em;
+    color: white;
+}
+.errorMsg{
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+    font-size: 0.7em;
+    font-weight: 500;
+    color: red;
+}
+.hide{
+    display: none;
+}
+
+.taskList{
+    margin-top: 30px;
+    /* border: 1px solid black; */
+    width: 100%;
+}
+.taskList li{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin: 10px 0;
+    padding: 0 25px;
+    font-size: 0.9;
+    font-weight: 500;
+    overflow: hidden;
+    border-radius: 9px;
+    background-color: rgba(0, 0, 0, 0.082);
+}
+.taskList li::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    border-radius: 50%;
+    margin-left: 5px;
+}
+.taskList li.complete{
+    text-decoration: line-through;
+    color: green;
+}
+.taskList li.complete::before{
+    border: 2px solid green;
+}
+.taskList li button{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    right: 5px;
+    background: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+.taskList li button:hover{
+    background-color: rgba(0, 0, 0, 0.192);
+}
